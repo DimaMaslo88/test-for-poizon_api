@@ -1,3 +1,4 @@
 export type TextReducerType ={
-  text: string[]
+  id:number
+  text: string
 }

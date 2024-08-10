@@ -1,0 +1,9 @@
+.headerContainer {
+    display: flex;
+    justify-content: center;
+
+}
+.headerText{
+    color: #e2b714;
+    font-family: "Helvetica Neue",BlinkMacSystemFont,cursive;
+}
