@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     padding: 50px;
 }
 
@@ -21,6 +21,12 @@
 }
 .resetIconContainer{
     margin-top: 40px;
+}
+.reload{
+    color: #e2b714;
+    font-size: x-large;
+    margin: 30px;
+    font-family: "Helvetica Neue", BlinkMacSystemFont, cursive
 }
 .resetIcon:hover{
     cursor: pointer;

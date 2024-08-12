@@ -1,29 +1,25 @@
 import { TextReducerType } from 'bll/types/text-reducer-type';
+import { ResetTextType } from 'bll/actions/actionTextReducer';
+import { textsBase } from 'bll/constans/constance';
 
-const textReducerState =
-  [
-    {
-      id: 1,
-      text: 'Создать приложение  на, которое оценит скорость печати пользователя. ' +
-        'Приложение должно предоставлять пользователю текст для ввода.'
+const textReducerState ={
+  texts:textsBase,
+  resetText:false,
+  userInput: '',
+  errors: 0,
+  startTime: null,
+  endTime: null,
+  errorMap: {},
+  isModalOpen: false,
+  }
 
-    },
-    {
-      id: 2,
-      text: 'Отображение текста для ввода. ' +
-        'Текст можно брать из любого источника ' +
-        '(например, заранее определенный массив строк).',
-    },
-    {
-      id: 3,
-      text:  'Приложение должно показывать правильные и неправильные символы разными цветами,' +
-        ' а также отображать статистику по скорости печати и числу ошибок.'
-    },
-  ]
 ;
-
-export const TextReducer = (state: TextReducerType[] = textReducerState, action: any): TextReducerType[] => {
+export type TextReducerGeneralType = ResetTextType
+export const TextReducer = (state: TextReducerType = textReducerState, action: TextReducerGeneralType): TextReducerType => {
   switch (action.type) {
+    case 'RESET-TEXT':{
+      return {...state,resetText:action.reset}
+    }
     default:
       return state;
   }

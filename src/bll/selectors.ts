@@ -1,4 +1,5 @@
 import { StateType } from 'bll/store';
-import { TextReducerType } from 'bll/types/text-reducer-type';
+import { TextReducerType, textType } from 'bll/types/text-reducer-type';
 
-export const selectText = (state:StateType):TextReducerType[]=>state.text
+export const selectText = (state:StateType):textType[]=>state.text.texts
+export const selectResetData =(state:StateType):boolean=>state.text.resetText
